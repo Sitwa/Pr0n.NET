@@ -1,0 +1,99 @@
+@model IEnumerable<pr0n2.Models.Cytaty>
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+	<meta name="robots" content="nofollow">
+	<link rel="stylesheet" type="text/css" href="blue.css">
+	<link rel="shortcut icon" href="blue.ico" type="image/x-ico">
+	<title>pr0n.pl - Cytat @ViewBag.Number</title>
+</head>
+    <body bgcolor="#ffffff" text="#000000" link="#c08000" vlink="#c08000" alink="#c08000">
+  	<center>
+        <form action="./" method="GET" name="qsearch">
+		<table border="0" cellpadding="2" cellspacing="0" width="80%">
+		<tr>
+			<td align="left" bgcolor="#c08000" class="hb"><b>pr0n.pl</b></td>
+			<td align="right" bgcolor="#c08000" class="hb"><b>Cytat @ViewBag.Number</b></td>
+		</tr>
+		</table>
+		<table border="0" cellpadding="2" cellspacing="0" width="80%">
+		<tr>
+			<td align="right" bgcolor="#f0f0f0" class="links"><a href="./">Strona główna</a> /
+				<a href="./latest">Najnowsze</a> /
+				<a href="./browse">Przeglądaj</a> /
+				<a href="./random">Losowe</a> <a href="./random2">&gt;0</a> /
+				<a href="./top">Najlepsze 100</a><a href="./top2">-200</a> /
+				<a href="./bottom">Najgorsze 100</a> /
+				<a href="./archive">Archiwum</a> /
+				<a href="./add">Dodaj cytat</a> /
+				<a href="./search">Szukaj</a> / #
+				<input class="smalltext" name="quote" size="4" type="text">
+			</td>
+		</tr>
+		</table>
+		</form>
+          <table border="0" cellpadding="2" cellspacing="0" width="80%">
+	<tr>
+		<td align="left">
+			<p class="quote">
+				<a href="./32081" title="Trwały odnośnik do tego cytatu"><b>#@ViewBag.Number</b></a> <a class="qa" href="./?up=32081">+</a>( @Html.DisplayNameFor(model => model.Date))<a class="qa" href="./?down=32081">-</a> <a class="qa" href="./?mod=32081">[X]</a> <a class="qa" href="./32081" title="Komentarze"> [11 komentarzy]</a> @Html.DisplayNameFor(model => model.Date)</p>
+			<p class="qt">
+        <table border="0" cellpadding="2" cellspacing="0" width="100%">
+            	</td>
+	</tr>
+              <tr>
+		<td align="left" bgcolor="#c08000" class="hb"><b>Komentarze</b></td>
+	</tr>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            @RenderBody()
+         
+        </div>
+
+            <tr>
+		<td align="left" bgcolor="#c08000" class="hb"><b>Dodaj komentarz</b></td>
+	</tr>
+	<tr>
+		<td align="center">
+			<form action="/index.php?quote=32081" method="POST" name="addc">
+			<table border="0" cellpadding="2" cellspacing="0" width="60%">
+				<tr><td align="left" width="20%" style="whitespace: nowrap;">Nick:</td><td width="1%">&nbsp;</td><td align="left"><input type="text" name="nick" value="Alfonso"></td></tr>
+				<tr><td align="left" width="20%" style="whitespace: nowrap;">Przepisz kod:</td><td width="1%"><img alt="kod" src="token.php"></td><td align="left"><input type="text" name="token" value=""></td></tr>
+				<tr><td colspan="3"><textarea cols="80" rows="10" name="newcomment" class="text"></textarea></td></tr>
+				<tr><td align="center" colspan="3">
+				<input class="button" name="addcomment" type="submit" value="Wyślij komentarz">&nbsp;&nbsp;
+				<input class="button" name="reset" type= "reset" value="Wyczyść">
+				</td></tr>
+			</table>
+			</form>
+		</td>
+	</tr>
+    </table>
+          <table bgcolor="#c08000" border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+			<td align="left" bgcolor="#f0f0f0" class="links">
+				<a href="./">Strona główna</a> /
+				<a href="./latest">Najnowsze</a> /
+				<a href="./browse">Przeglądaj</a> /
+				<a href="./random">Losowe</a> <a href="./random2">&gt;0</a> /
+				<a href="./top">Najlepsze 100</a><a href="./top2">-200</a> /
+				<a href="./bottom">Najgorsze 100</a> /
+				<a href="./archive">Archiwum</a> /
+				<a href="./add">Dodaj cytat</a> /
+				<a href="./search">Szukaj</a> /
+				<a href="./settings">Opcje</a>
+			</td>
+		
+		</tr>  
+		</table>
+		<table bgcolor="#c08000" border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+			<td align="left" class="fb">0.1816s</td>
+			<td align="right" class="fb">7716 zatwierdzonych cytatów; 4 oczekujące na zatwierdzenie; średnia ocen 5.7422</td>
+		</tr>
+		</table>
+</center>
+    </body>
+</html>
